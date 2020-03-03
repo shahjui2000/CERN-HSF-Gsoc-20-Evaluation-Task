@@ -43,11 +43,11 @@ background = np.load('./pytorch_background.npy').reshape(10000,32,32)
 X1, X_test1, y1, y_test1 = tts(signal, np.zeros((10000,1)), test_size = 0.2)
 X2, X_test2, y2, y_test2 = tts(background, np.ones((10000,1)), test_size = 0.2)
 
-# X_train = np.concatenate((X1, X2), axis=0)
-# y_train = np.concatenate((y1, y2), axis=0)
+X_train = np.concatenate((X1, X2), axis=0)
+y_train = np.concatenate((y1, y2), axis=0)
 
-# X_test = np.concatenate((X_test1, X_test2), axis=0)
-# y_test = np.concatenate((y_test1, y_test2), axis=0)
+X_test = np.concatenate((X_test1, X_test2), axis=0)
+y_test = np.concatenate((y_test1, y_test2), axis=0)
 
 #################################IMAGES########################################################
 img = signal[862,:,:]   
