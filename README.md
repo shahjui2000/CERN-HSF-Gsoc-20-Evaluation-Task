@@ -1,35 +1,4 @@
 # CNN
 PyKeras-TMVA, PyTorch, TMVA
 
-For pytorch, first converted root file to numpy array and saved it using the following python code lines:
-
-##################################################################
-
-
-from ROOT import TMVA, TFile, TTree, TCut
-
-import numpy as np
-
-
-data = TFile.Open("/home/jui/Desktop/tmva/sample_images_32x32.root")
-
-print(data.ls())
-
-
-sig = data.Get('sig_tree;2')
-
-bkg = data.Get('bkg_tree;2')
-
-
-signal = np.asarray([[event.vars] for event in sig])
-
-background = np.asarray([[event.vars] for event in bkg])
-
-
-np.save('pytorch_signal',signal)
-
-np.save('pytorch_background',background)
-
-#################################################################
-
-
+For pytorch, first converted root file to numpy array and saved it using root2array.py
