@@ -1,7 +1,7 @@
 # CNN
 PyKeras-TMVA, PyTorch, TMVA
 
-For pytorch, firt converted root file to numpy array and saved it using the following python code lines:
+For pytorch, firrt converted root file to numpy array and saved it using the following python code lines:
 
 ##################################################################
 
