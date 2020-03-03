@@ -21,9 +21,9 @@ sig = data.Get('sig_tree;2')
 bkg = data.Get('bkg_tree;2')
 
 
-signal = np.asarray([[sig.vars] for event in sig]).reshape(10000,32,32)
+signal = np.asarray([[sig.vars] for event in sig])
 
-background = np.asarray([[bkg.vars] for event in bkg]).reshape(10000,32,32)
+background = np.asarray([[bkg.vars] for event in bkg])
 
 
 np.save('pytorch_signal',signal)
